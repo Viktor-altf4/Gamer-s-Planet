@@ -1,0 +1,142 @@
+body {
+    background-color: #0b0b16; /* Dark background */
+    color: #ffffff; /* White text for contrast */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    margin: 0;
+    padding: 0;
+}
+
+/* General Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a2e; /* Dark gaming-themed background */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #ffffff; /* White text for contrast */
+    text-decoration: none;
+    padding: 14px 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* White text for the logo */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #ffffff; /* White text for contrast */
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+}
+
+.nav-links a:hover {
+    background-color: #16213e; /* Slightly lighter shade for hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) { /* Tablets and smaller devices */
+    nav a {
+        float: none;
+        text-align: left;
+        padding: 10px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle button on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide the menu by default on smaller screens */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a2e; /* Match the nav bar background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show the menu when the 'show' class is added */
+    }
+}
+
+@media (max-width: 480px) { /* Phones */
+    nav {
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    }
+
+    .nav-links {
+        flex-wrap: wrap; /* Wrap links to fit smaller screens */
+        justify-content: center; /* Center links on smaller screens */
+    }
+
+    .nav-links a {
+        padding: 8px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Adjust font size for better fit */
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Add spacing below the logo */
+    }
+}
+
+@media (min-width: 1200px) { /* TVs and large screens */
+    body {
+        font-size: 18px;
+        padding: 40px;
+    }
+
+    nav a {
+        font-size: 18px;
+        padding: 16px 20px;
+    }
+
+    nav a img {
+        width: 24px;
+        height: 24px;
+    }
+}
